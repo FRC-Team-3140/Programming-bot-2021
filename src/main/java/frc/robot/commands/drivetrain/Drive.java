@@ -14,8 +14,8 @@ public class Drive extends CommandBase {
 
   @Override
   public void execute() {
-    double leftspeed = RobotContainer.xbox.getRawAxis(1);
-    double rightspeed = RobotContainer.xbox.getRawAxis(5);
+    double leftspeed = RobotContainer.xbox.getSmoothedAltY();
+    double rightspeed = RobotContainer.xbox.getSmoothedMainY();
 
     RobotContainer.dt.tankDrive(.2*leftspeed,.2*rightspeed);
   }
